@@ -1,0 +1,39 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <h2>用户登录</h2><hr>
+    <input id="nickname" type="text" value="admin"/></br>
+    <input id="password"  type="text" value="123"/></br>
+    <button onclick='login()'>登录</button></br>
+	<div id="tip"></div>
+	<script src="jquery.min.js"></script>
+	<script>
+	function login(){
+	    var nickname = $("#nickname").val();
+        var password = $("#password").val();
+	    $.ajax({
+                url: 'http://localhost:8080/user/login',
+                type: "post",
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                data: JSON.stringify({
+                    nickname: nickname,
+                    password: password
+                }),
+                success: function (res) {
+                    if(res.code == 1){
+                        $("#tip").html("用户ID = "+res.data.user_id+"  用户名 = "+res.data.nickname);
+					}else{
+                        $("#tip").html(res.message);
+					}
+				},
+                error: function () {
+                    $("#tip").html("连接失败");
+                }
+        });
+	}
+	</script>
+</body>
+</html>

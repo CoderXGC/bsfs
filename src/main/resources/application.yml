@@ -1,0 +1,27 @@
+logging:
+  file:
+    name: /logs/my.log
+  level:
+    com:
+      ylesb:
+        springboot: DEBUG
+    org:
+      hibernate: warn
+      springframework:
+        web: warn
+    root: warn
+  pattern:
+    console: '%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n'
+    file: '%d{yyyy/MM/dd-HH:mm} [%thread] %-5level %logger- %msg%n'
+server:
+  port: 8080
+spring:
+  datasource:
+    name: test  #数据库名
+    url: jdbc:mysql://116.62.110.115:3306/facesign #url
+    username: facesign  #用户名
+    password: 99d44172db8d6d58  #密码
+    driver-class-name: com.mysql.cj.jdbc.Driver  #数据库链接驱动
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  #配置映射文件
+  type-aliases-package: com.ylesb.bsfs.mapper #配置实体类
