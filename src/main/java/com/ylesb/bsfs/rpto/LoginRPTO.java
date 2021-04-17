@@ -16,7 +16,7 @@ import javax.validation.constraints.NotEmpty;
 
 /**
  *
- * 〈登录RPTO〉
+ * 〈rpto即response transfer object，是API接口返回数据的包装〉
  *
  * @author White
  * @create 2021/4/16
@@ -24,5 +24,5 @@ import javax.validation.constraints.NotEmpty;
 @Data
 public class LoginRPTO {
     private String user_id;
-    private String nickname;
+    private String name;
 }

@@ -18,7 +18,6 @@ import com.ylesb.bsfs.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 /**
  *
  * 〈service接口实现〉
@@ -34,13 +33,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public LoginRPTO login(LoginRQTO login) {
-        UserBean user = userMapper.login(login.getNickname(),login.getPassword());
+        UserBean user = userMapper.login(login.getId(),login.getPassword());
         if(user == null){
             return null;
         }
         LoginRPTO rpto = new LoginRPTO();
         rpto.setUser_id(user.getId());
-        rpto.setNickname(login.getNickname());
+        rpto.setName(user.getName());
         return rpto;
     }
 }

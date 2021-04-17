@@ -24,7 +24,6 @@ public class BsfsApplication extends SpringBootServletInitializer implements Com
     @Override
     public void run(String... strings) throws Exception {
         //System.out.println("服务启动完成!");
-        log.debug("服务启动完成!");
+        log.info("服务启动完成!");
     }
-
 }

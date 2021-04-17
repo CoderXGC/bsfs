@@ -17,7 +17,7 @@ import javax.validation.constraints.NotEmpty;
 
 /**
  *
- * 〈登录输出〉
+ * 〈rqto即request transfer object，是API接口请求数据的包装〉
  *
  * @author White
  * @create 2021/4/16
@@ -25,9 +25,9 @@ import javax.validation.constraints.NotEmpty;
 @Data
 public class LoginRQTO {
 
-    @NotEmpty(message = "昵称不能为空")
+    @NotEmpty(message = "id")
     @Length(max = 12,message = "昵称最大长度12")
-    private String nickname;
+    private String id;
 
     @NotEmpty(message = "密码不能为空")
     @Length(max = 20,message = "密码最大长度20")
