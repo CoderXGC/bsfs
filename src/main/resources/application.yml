@@ -20,3 +20,4 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml  #配置映射文件
   type-aliases-package: com.ylesb.bsfs.mapper #配置实体类
+
