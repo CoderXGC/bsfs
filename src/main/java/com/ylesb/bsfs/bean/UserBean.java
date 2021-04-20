@@ -20,7 +20,6 @@ import lombok.Data;
  * @create 2021/4/16
  */
 @Data
-
 public class UserBean  {
 
     private String id;

@@ -1,9 +1,9 @@
 /**
  * Copyright (C), 2020-2021, XXX有限公司
- * FileName: LoginRQTO
+ * FileName: FileRPTO
  * Author:   White
- * Date:     2021/4/16 19:15
- * Description: 登录RPTO
+ * Date:     2021/4/20 15:36
+ * Description: 上传图片获得的返回数据接口
  * History:
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
@@ -12,17 +12,14 @@ package com.ylesb.bsfs.rpto;
 
 import lombok.Data;
 
-import javax.validation.constraints.NotEmpty;
-
 /**
  *
- * 〈登录rpto即response transfer object，是API接口返回数据的包装〉
+ * 〈上传图片获得的返回数据接口〉
  *
  * @author White
- * @create 2021/4/16
+ * @create 2021/4/20
  */
 @Data
-public class LoginRPTO {
-    private String user_id;
-    private String name;
+public class FileRPTO {
+   private String url;//上传成功返回的url
 }

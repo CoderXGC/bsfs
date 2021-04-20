@@ -1,6 +1,6 @@
 logging:
   file:
-    name: /logs/my.log
+    name: my.log
   level:
     com:
       ylesb:
@@ -11,13 +11,25 @@ logging:
 server:
   port: 8080
 spring:
+  servlet:
+    multipart:
+      enabled: true
+      location: F:/upload
+      max-file-size: 20MB
+      max-request-size: 20MB
+  thymeleaf:
+    cache: false
+    enabled: false
   datasource:
-    name: test  #数据库名
-    url: jdbc:mysql://116.62.110.115:3306/facesign #url
-    username: facesign  #用户名
-    password: 99d44172db8d6d58  #密码
-    driver-class-name: com.mysql.cj.jdbc.Driver  #数据库链接驱动
+   name: test  #数据库名
+   url: jdbc:mysql://116.62.110.115:3306/facesign #url
+   username: facesign  #用户名
+   password: 99d44172db8d6d58  #密码
+   driver-class-name: com.mysql.cj.jdbc.Driver  #数据库链接驱动
 mybatis:
   mapper-locations: classpath:mapper/*.xml  #配置映射文件
   type-aliases-package: com.ylesb.bsfs.mapper #配置实体类
+upload:
+  picture:
+    path: F:/upload
 

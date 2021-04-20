@@ -18,9 +18,9 @@ package com.ylesb.bsfs.core;
  * @create 2021/4/16
  */
 public enum ActionCode {
-    ERROR(-1,"用户名密码错误"),
+    ERROR(-1,"请求错误"),
     SUCCESS(200,"请求成功"),
-    EXCEPTION(404,"请输入账号密码"),
+    EXCEPTION(404,"请求失败请检查"),
     VALID(100,"参数校验异常");
 
     public int code;

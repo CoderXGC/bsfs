@@ -6,4 +6,8 @@
 <select id="login" resultType="com.ylesb.bsfs.bean.UserBean">
     SELECT * FROM user WHERE id = #{id} and pwd = #{pwd}
 </select>
+    <select id="find" resultType="com.ylesb.bsfs.bean.UserBean">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
 </mapper>
+

@@ -2,8 +2,10 @@ package com.ylesb.bsfs.controller;
 
 
 import com.ylesb.bsfs.core.ActionCode;
+import com.ylesb.bsfs.rpto.FindRPTO;
 import com.ylesb.bsfs.rpto.LoginRPTO;
 import com.ylesb.bsfs.rpto.RPTO;
+import com.ylesb.bsfs.rqto.FindRQTO;
 import com.ylesb.bsfs.rqto.LoginRQTO;
 import com.ylesb.bsfs.service.UserService;
 import com.ylesb.bsfs.serviceIml.UserServiceImpl;
@@ -32,6 +34,15 @@ public class UserController {
         LoginRPTO rpto = mUserService.login(login);
         if(rpto == null){
             return new RPTO<>("用户名密码错误");
+        }
+        return new RPTO<>(ActionCode.SUCCESS,rpto);
+    }
+    @ResponseBody
+    @RequestMapping(value = "/find",method = RequestMethod.POST)
+    public RPTO find(@RequestBody @Valid FindRQTO find) {
+        FindRPTO rpto = mUserService.find(find);
+        if(rpto == null){
+            return new RPTO<>("未找到此员工");
         }
         return new RPTO<>(ActionCode.SUCCESS,rpto);
     }

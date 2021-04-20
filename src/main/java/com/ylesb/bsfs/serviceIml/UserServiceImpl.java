@@ -12,7 +12,9 @@ package com.ylesb.bsfs.serviceIml;
 
 import com.ylesb.bsfs.bean.UserBean;
 import com.ylesb.bsfs.mapper.UserMapper;
+import com.ylesb.bsfs.rpto.FindRPTO;
 import com.ylesb.bsfs.rpto.LoginRPTO;
+import com.ylesb.bsfs.rqto.FindRQTO;
 import com.ylesb.bsfs.rqto.LoginRQTO;
 import com.ylesb.bsfs.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -40,6 +42,17 @@ public class UserServiceImpl implements UserService {
         LoginRPTO rpto = new LoginRPTO();
         rpto.setUser_id(user.getId());
         rpto.setName(user.getName());
+        return rpto;
+    }
+
+    @Override
+    public FindRPTO find(FindRQTO find) {
+        UserBean user = userMapper.find(find.getId());
+        if(user == null){
+            return null;
+        }
+        FindRPTO rpto = new FindRPTO();
+        rpto.setFaceimg(user.getFaceimg());
         return rpto;
     }
 }
