@@ -24,20 +24,17 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.io.*;
-
-import static com.ylesb.bsfs.utils.FileUtil.inputStreamToFile;
 
 /**
  *
- * 〈图片上传〉
+ * 〈图片上传测试接口最初版〉
  *
  * @author White
  * @create 2021/4/19
  */
 @Controller
-@RequestMapping("/user")
-public class FileController {
+@RequestMapping("/usertest")
+public class FlieControllerTest {
 
 
     @Resource
@@ -45,29 +42,18 @@ public class FileController {
     @ResponseBody
     //处理文件上传
     @RequestMapping(value="/uploadimg", method = RequestMethod.POST)
-    public RPTO uploadImg(@RequestParam("file") MultipartFile file,@RequestParam("id") String id ) {
+    public RPTO uploadImg(@RequestParam("file") MultipartFile file) {
         FileRPTO fileRPTO=new FileRPTO();
         Url url=new Url();
-        //String fileName = file.getOriginalFilename();//可能出现问题。
-        String fileName=FileUtil.getFileName(file); ;
+        String fileName = file.getOriginalFilename();
         //设置文件上传路径
         String path = System.getProperty("user.dir")+"/faceImg/";
-        File toFile = null;
         try {
-            if (file.equals("") || file.getSize() <= 0) {
-                file = null;
-            } else {
-                InputStream ins = null;
-                ins = file.getInputStream();
-                toFile = new File(path+id+fileName);
-                fileRPTO.setUrl(url.getHomeurl()+"/faceImg/"+id+fileName);
-                inputStreamToFile(ins, toFile);
-                ins.close();
-            }
+            FileUtil.uploadFile(file.getBytes(), path, fileName);
+            fileRPTO.setUrl(url.getHomeurl()+"/faceImg/"+fileName);
             return new RPTO<>(ActionCode.SUCCESS,fileRPTO);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return new RPTO<>("上传错误请联系管理员");
+        } catch (Exception e) {
+            return new RPTO<>("上传错误请联系管理员！");
         }
     }
 }

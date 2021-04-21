@@ -2,9 +2,11 @@ package com.ylesb.bsfs.controller;
 
 
 import com.ylesb.bsfs.core.ActionCode;
+import com.ylesb.bsfs.rpto.AddFaceimgRPTO;
 import com.ylesb.bsfs.rpto.FindRPTO;
 import com.ylesb.bsfs.rpto.LoginRPTO;
 import com.ylesb.bsfs.rpto.RPTO;
+import com.ylesb.bsfs.rqto.AddFaceimgRQTO;
 import com.ylesb.bsfs.rqto.FindRQTO;
 import com.ylesb.bsfs.rqto.LoginRQTO;
 import com.ylesb.bsfs.service.UserService;
@@ -43,6 +45,15 @@ public class UserController {
         FindRPTO rpto = mUserService.find(find);
         if(rpto == null){
             return new RPTO<>("未找到此员工");
+        }
+        return new RPTO<>(ActionCode.SUCCESS,rpto);
+    }
+    @ResponseBody
+    @RequestMapping(value = "/addfaceimg",method = RequestMethod.POST)
+    public RPTO addfaceimg(@RequestBody @Valid AddFaceimgRQTO addfaceimg) {
+        AddFaceimgRPTO rpto = mUserService.addfaceimg(addfaceimg);
+        if(rpto == null){
+            return new RPTO<>("添加失败");
         }
         return new RPTO<>(ActionCode.SUCCESS,rpto);
     }

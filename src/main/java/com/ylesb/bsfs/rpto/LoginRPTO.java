@@ -25,4 +25,5 @@ import javax.validation.constraints.NotEmpty;
 public class LoginRPTO {
     private String user_id;
     private String name;
+    private String faceimg;
 }

@@ -7,4 +7,5 @@ import org.apache.ibatis.annotations.Param;
 public interface UserMapper {
     UserBean login(@Param("id") String id, @Param("pwd")String pwd);
     UserBean find(@Param("id") String id);
+    void addfaceimg(@Param("id") String id, @Param("faceimg")String faceimg);
 }

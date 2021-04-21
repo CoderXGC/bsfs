@@ -1,4 +1,4 @@
-package com.ylesb.bsfs.controller;
+package com.ylesb.bsfs.core;
 
 
 import com.ylesb.bsfs.core.ActionCode;

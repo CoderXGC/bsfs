@@ -38,7 +38,7 @@ public class LogController {
     @Autowired
     private LogService logService;
     @ResponseBody
-    @RequestMapping(value = "/login",method = RequestMethod.POST)
+    @RequestMapping(value = "/loginin",method = RequestMethod.POST)
     public RPTO login(@RequestBody @Valid LogRQTO log) {
         LogRPTO rpto1=logService.add(log);
         if(rpto1 == null){

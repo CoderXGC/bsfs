@@ -6,8 +6,11 @@
 <select id="login" resultType="com.ylesb.bsfs.bean.UserBean">
     SELECT * FROM user WHERE id = #{id} and pwd = #{pwd}
 </select>
-    <select id="find" resultType="com.ylesb.bsfs.bean.UserBean">
+<select id="find" resultType="com.ylesb.bsfs.bean.UserBean">
         SELECT * FROM user WHERE id = #{id}
     </select>
+    <update id="addfaceimg">
+        update user set faceimg = #{faceimg} where id = #{id}
+    </update>
 </mapper>
 

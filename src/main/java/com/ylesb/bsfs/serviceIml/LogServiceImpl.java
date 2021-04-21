@@ -34,7 +34,8 @@ public class LogServiceImpl implements LogService {
     private LogMapper logMapper;
     @Override
     public LogRPTO add(LogRQTO add) {
-        //LogBean log = logMapper.add(add.getId(),add.getMessage());
+//        LogBean log = logMapper.add(add.getId(),add.getMessage());
+        logMapper.add(add.getId(),add.getMessage());
         String log="";
         if(log == null){
             return null;

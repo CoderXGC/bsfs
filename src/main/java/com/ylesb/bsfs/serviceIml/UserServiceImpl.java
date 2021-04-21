@@ -12,8 +12,10 @@ package com.ylesb.bsfs.serviceIml;
 
 import com.ylesb.bsfs.bean.UserBean;
 import com.ylesb.bsfs.mapper.UserMapper;
+import com.ylesb.bsfs.rpto.AddFaceimgRPTO;
 import com.ylesb.bsfs.rpto.FindRPTO;
 import com.ylesb.bsfs.rpto.LoginRPTO;
+import com.ylesb.bsfs.rqto.AddFaceimgRQTO;
 import com.ylesb.bsfs.rqto.FindRQTO;
 import com.ylesb.bsfs.rqto.LoginRQTO;
 import com.ylesb.bsfs.service.UserService;
@@ -53,6 +55,20 @@ public class UserServiceImpl implements UserService {
         }
         FindRPTO rpto = new FindRPTO();
         rpto.setFaceimg(user.getFaceimg());
+        return rpto;
+    }
+
+    @Override
+    public AddFaceimgRPTO addfaceimg(AddFaceimgRQTO addfaceimg) {
+       // UserBean user =
+        userMapper.addfaceimg(addfaceimg.getId(),addfaceimg.getFaceimg());
+        String user="";
+        if(user == null){
+            return null;
+        }
+        AddFaceimgRPTO rpto = new AddFaceimgRPTO();
+        rpto.setId(user);
+        rpto.setFaceimg(user);
         return rpto;
     }
 }

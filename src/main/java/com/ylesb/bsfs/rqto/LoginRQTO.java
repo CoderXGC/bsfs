@@ -33,4 +33,5 @@ public class LoginRQTO {
     @Length(max = 20,message = "密码最大长度20")
     private String password;
 
+
 }
