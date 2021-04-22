@@ -10,6 +10,7 @@
  */
 package com.ylesb.bsfs.serviceIml;
 
+import com.ylesb.bsfs.bean.FaceImgUrlBean;
 import com.ylesb.bsfs.bean.UserBean;
 import com.ylesb.bsfs.mapper.UserMapper;
 import com.ylesb.bsfs.rpto.AddFaceimgRPTO;
@@ -22,6 +23,10 @@ import com.ylesb.bsfs.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * 〈service接口实现〉
@@ -59,6 +64,23 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public List<UserBean> findall() {
+        List<UserBean> user = userMapper.findall();
+        if(user == null){
+            return null;
+        }
+        List<UserBean> list = new ArrayList<>();
+
+        for (int i=0;i<user.size();i++) {
+            UserBean userBean = new UserBean();
+            userBean.setId(user.get(i).getId());
+            userBean.setFaceimg(user.get(i).getFaceimg());
+            list.add(userBean);
+        }
+        return list;
+    }
+
+    @Override
     public AddFaceimgRPTO addfaceimg(AddFaceimgRQTO addfaceimg) {
        // UserBean user =
         userMapper.addfaceimg(addfaceimg.getId(),addfaceimg.getFaceimg());
@@ -70,5 +92,23 @@ public class UserServiceImpl implements UserService {
         rpto.setId(user);
         rpto.setFaceimg(user);
         return rpto;
+    }
+
+    @Override
+    public List<FaceImgUrlBean> findfaceimg() {
+        List<FaceImgUrlBean> user = userMapper.findfaceimg();
+        if(user == null){
+            return null;
+        }
+        List<FaceImgUrlBean> list = new ArrayList<>();
+
+        for (int i=0;i<user.size();i++) {
+
+            FaceImgUrlBean faceImgUrlBean = new FaceImgUrlBean();
+            faceImgUrlBean.setId(user.get(i).getId());
+            faceImgUrlBean.setFaceimg(user.get(i).getFaceimg());
+            list.add(faceImgUrlBean);
+        }
+        return list;
     }
 }

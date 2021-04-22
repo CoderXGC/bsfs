@@ -10,6 +10,8 @@ package com.ylesb.bsfs.rpto;
 
 import lombok.Data;
 
+import java.util.List;
+
 /**
  *
  * 〈查找返回faceimg〉
@@ -20,4 +22,5 @@ import lombok.Data;
 @Data
 public class FindRPTO {
     private String faceimg;
+    private List<String> faceimglist;
 }

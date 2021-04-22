@@ -1,6 +1,8 @@
 package com.ylesb.bsfs.controller;
 
 
+import com.ylesb.bsfs.bean.FaceImgUrlBean;
+import com.ylesb.bsfs.bean.UserBean;
 import com.ylesb.bsfs.core.ActionCode;
 import com.ylesb.bsfs.rpto.AddFaceimgRPTO;
 import com.ylesb.bsfs.rpto.FindRPTO;
@@ -19,6 +21,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by cc_want on 2018/6/2.
@@ -45,6 +49,26 @@ public class UserController {
         FindRPTO rpto = mUserService.find(find);
         if(rpto == null){
             return new RPTO<>("未找到此员工");
+        }
+        return new RPTO<>(ActionCode.SUCCESS,rpto);
+    }
+    @ResponseBody
+    @RequestMapping(value = "/findall",method = RequestMethod.POST)
+    public RPTO findall() {
+        List<UserBean> rpto = mUserService.findall();
+
+       // String rpto=mUserService.findall();
+        if(rpto == null){
+            return new RPTO<>("未找到");
+        }
+        return new RPTO<>(ActionCode.SUCCESS,rpto);
+    }
+    @ResponseBody
+    @RequestMapping(value = "/findfaceimg",method = RequestMethod.POST)
+    public RPTO findfaceimg() {
+        List<FaceImgUrlBean> rpto = mUserService.findfaceimg();
+        if(rpto == null){
+            return new RPTO<>("未找到");
         }
         return new RPTO<>(ActionCode.SUCCESS,rpto);
     }

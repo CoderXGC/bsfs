@@ -1,5 +1,6 @@
 package com.ylesb.bsfs.service;
 
+import com.ylesb.bsfs.bean.FaceImgUrlBean;
 import com.ylesb.bsfs.bean.UserBean;
 import com.ylesb.bsfs.rpto.AddFaceimgRPTO;
 import com.ylesb.bsfs.rpto.FindRPTO;
@@ -8,9 +9,13 @@ import com.ylesb.bsfs.rqto.AddFaceimgRQTO;
 import com.ylesb.bsfs.rqto.FindRQTO;
 import com.ylesb.bsfs.rqto.LoginRQTO;
 
+import java.util.List;
+
 public interface UserService {
 
     LoginRPTO login(LoginRQTO login);
     FindRPTO find(FindRQTO find);
+    List<UserBean> findall();
     AddFaceimgRPTO addfaceimg(AddFaceimgRQTO login);
+    List<FaceImgUrlBean> findfaceimg();
 }

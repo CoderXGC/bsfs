@@ -12,6 +12,8 @@ package com.ylesb.bsfs.bean;
 
 import lombok.Data;
 
+import java.util.List;
+
 /**
  *
  * 〈用户Bean〉
