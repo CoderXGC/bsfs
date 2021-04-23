@@ -17,9 +17,15 @@ spring:
       location: F:/upload
       max-file-size: 20MB
       max-request-size: 20MB
-  thymeleaf:
-    cache: false
-    enabled: false
+  mvc:
+  static-path-pattern: /faceimg/**
+  jackson:
+    parser:
+      allow-numeric-leading-zeros: true
+    date-format: yyyy-MM-dd
+  time-zone: GMT+8
+  serialization:
+   write-dates-as-timestamps: false
   datasource:
    name: test  #数据库名
    url: jdbc:mysql://116.62.110.115:3306/facesign #url

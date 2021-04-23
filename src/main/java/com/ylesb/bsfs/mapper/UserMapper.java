@@ -15,4 +15,5 @@ public interface UserMapper {
     void addfaceimg(@Param("id") String id, @Param("faceimg")String faceimg);
     List<FaceImgUrlBean> findfaceimg();
 
+
 }

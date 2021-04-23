@@ -16,6 +16,8 @@ import com.ylesb.bsfs.core.Url;
 import com.ylesb.bsfs.rpto.FileRPTO;
 import com.ylesb.bsfs.rpto.RPTO;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.ClassUtils;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -45,13 +47,15 @@ public class FileController {
     @ResponseBody
     //处理文件上传
     @RequestMapping(value="/uploadimg", method = RequestMethod.POST)
-    public RPTO uploadImg(@RequestParam("file") MultipartFile file,@RequestParam("id") String id ) {
+    public RPTO uploadImg(@RequestParam("file") MultipartFile file,@RequestParam("id") String id ) throws FileNotFoundException {
         FileRPTO fileRPTO=new FileRPTO();
         Url url=new Url();
         //String fileName = file.getOriginalFilename();//可能出现问题。
         String fileName=FileUtil.getFileName(file); ;
         //设置文件上传路径
-        String path = System.getProperty("user.dir")+"/faceImg/";
+        String path = ClassUtils.getDefaultClassLoader().getResource("static").getPath()+"/faceImg/";
+      //  String path = System.getProperty("user.dir")+"/faceImg/";
+     //   String imgUrl = ResourceUtils.getURL("classpath:").getPath() + "static/imgGallery/" + newName;
         File toFile = null;
         try {
             if (file.equals("") || file.getSize() <= 0) {

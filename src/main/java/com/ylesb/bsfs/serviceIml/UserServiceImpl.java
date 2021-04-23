@@ -60,6 +60,8 @@ public class UserServiceImpl implements UserService {
         }
         FindRPTO rpto = new FindRPTO();
         rpto.setFaceimg(user.getFaceimg());
+        rpto.setSignintime(user.getSignintime());
+        rpto.setSignouttime(user.getSignouttime());
         return rpto;
     }
 
@@ -74,6 +76,8 @@ public class UserServiceImpl implements UserService {
         for (int i=0;i<user.size();i++) {
             UserBean userBean = new UserBean();
             userBean.setId(user.get(i).getId());
+            userBean.setSignintime(user.get(i).getSignintime());
+            userBean.setSignouttime(user.get(i).getSignouttime());
             userBean.setFaceimg(user.get(i).getFaceimg());
             list.add(userBean);
         }

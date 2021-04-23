@@ -4,13 +4,9 @@ package com.ylesb.bsfs.controller;
 import com.ylesb.bsfs.bean.FaceImgUrlBean;
 import com.ylesb.bsfs.bean.UserBean;
 import com.ylesb.bsfs.core.ActionCode;
-import com.ylesb.bsfs.rpto.AddFaceimgRPTO;
-import com.ylesb.bsfs.rpto.FindRPTO;
-import com.ylesb.bsfs.rpto.LoginRPTO;
-import com.ylesb.bsfs.rpto.RPTO;
-import com.ylesb.bsfs.rqto.AddFaceimgRQTO;
-import com.ylesb.bsfs.rqto.FindRQTO;
-import com.ylesb.bsfs.rqto.LoginRQTO;
+import com.ylesb.bsfs.rpto.*;
+import com.ylesb.bsfs.rqto.*;
+import com.ylesb.bsfs.service.SignService;
 import com.ylesb.bsfs.service.UserService;
 import com.ylesb.bsfs.serviceIml.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +29,8 @@ public class UserController {
 
     @Autowired
     private UserService mUserService;
+    @Autowired
+    private SignService mSignService;
 
     @ResponseBody
     @RequestMapping(value = "/login",method = RequestMethod.POST)
@@ -80,5 +78,23 @@ public class UserController {
             return new RPTO<>("添加失败");
         }
         return new RPTO<>(ActionCode.SUCCESS,rpto);
+    }
+    @ResponseBody
+    @RequestMapping(value = "/signin",method = RequestMethod.POST)
+    public RPTO sign(@RequestBody @Valid SignRQTO signRQTO) {
+        SignRPTO rpto1=mSignService.sign(signRQTO);
+        if(rpto1 == null){
+            return new RPTO<>("签到失败请联系管理员");
+        }
+        return new RPTO<>(ActionCode.SUCCESS,rpto1);
+    }
+    @ResponseBody
+    @RequestMapping(value = "/findsign",method = RequestMethod.POST)
+    public RPTO findsign(@RequestBody @Valid SignRQTO signRQTO) {
+        SignRPTO rpto1=mSignService.findsign(signRQTO);
+        if(rpto1 == null){
+            return new RPTO<>("查找失败");
+        }
+        return new RPTO<>(ActionCode.SUCCESS,rpto1);
     }
 }

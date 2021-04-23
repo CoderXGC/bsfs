@@ -29,5 +29,7 @@ public class UserBean  {
     private String faceimg;
     private String pwd;
     private int did;
+    private String signintime;
+    private String signouttime;
 
 }

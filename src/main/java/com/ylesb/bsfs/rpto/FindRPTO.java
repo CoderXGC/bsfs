@@ -22,5 +22,6 @@ import java.util.List;
 @Data
 public class FindRPTO {
     private String faceimg;
-    private List<String> faceimglist;
+    private String signintime;
+    private String signouttime;
 }

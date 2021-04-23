@@ -21,5 +21,5 @@ import lombok.Data;
  */
 @Data
 public class Url {
-    public String homeurl="http://bs.ylesb.com/";
+    public String homeurl="http://localhost:8080";
 }
