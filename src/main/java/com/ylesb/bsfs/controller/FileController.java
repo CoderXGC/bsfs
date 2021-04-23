@@ -53,7 +53,7 @@ public class FileController {
         //String fileName = file.getOriginalFilename();//可能出现问题。
         String fileName=FileUtil.getFileName(file); ;
         //设置文件上传路径
-        String path = ClassUtils.getDefaultClassLoader().getResource("static").getPath()+"/faceImg/";
+        String path = ClassUtils.getDefaultClassLoader().getResource("static").getPath();
       //  String path = System.getProperty("user.dir")+"/faceImg/";
      //   String imgUrl = ResourceUtils.getURL("classpath:").getPath() + "static/imgGallery/" + newName;
         File toFile = null;
@@ -63,7 +63,7 @@ public class FileController {
             } else {
                 InputStream ins = null;
                 ins = file.getInputStream();
-                toFile = new File(path+id+fileName);
+                toFile = new File(path+"/faceImg/"+id+fileName);
                 fileRPTO.setUrl(url.getHomeurl()+"/faceImg/"+id+fileName);
                 inputStreamToFile(ins, toFile);
                 ins.close();

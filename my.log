@@ -4414,3 +4414,68 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '+
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
 	... 58 common frames omitted
+2021/04/23-22:22 [main] INFO  com.ylesb.bsfs.BsfsApplicationTests- Starting BsfsApplicationTests using Java 1.8.0_121 on XGC with PID 15664 (started by 46653 in F:\IDEAProject\bsfs)
+2021/04/23-22:22 [main] INFO  com.ylesb.bsfs.BsfsApplicationTests- No active profile set, falling back to default profiles: default
+2021/04/23-22:22 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2021/04/23-22:22 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021/04/23-22:22 [main] INFO  com.ylesb.bsfs.BsfsApplicationTests- Started BsfsApplicationTests in 2.397 seconds (JVM running for 3.289)
+2021/04/23-22:22 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
+2021/04/23-22:22 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'
+2021/04/23-22:32 [main] INFO  com.ylesb.bsfs.BsfsApplicationTests- Starting BsfsApplicationTests using Java 1.8.0_121 on XGC with PID 14404 (started by 46653 in F:\IDEAProject\bsfs)
+2021/04/23-22:32 [main] INFO  com.ylesb.bsfs.BsfsApplicationTests- No active profile set, falling back to default profiles: default
+2021/04/23-22:32 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2021/04/23-22:32 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021/04/23-22:32 [main] INFO  com.ylesb.bsfs.BsfsApplicationTests- Started BsfsApplicationTests in 2.825 seconds (JVM running for 3.729)
+2021/04/23-22:32 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
+2021/04/23-22:32 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'
+2021/04/23-22:50 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 20484 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
+2021/04/23-22:50 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
+2021/04/23-22:50 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2021/04/23-22:50 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2021/04/23-22:50 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021/04/23-22:50 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2021/04/23-22:50 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 900 ms
+2021/04/23-22:50 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2021/04/23-22:50 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021/04/23-22:50 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2021/04/23-22:50 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 2.022 seconds (JVM running for 2.895)
+2021/04/23-22:50 [main] INFO  com.ylesb.bsfs.BsfsApplication- 鏈嶅姟鍚姩瀹屾垚!
+2021/04/23-22:50 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/04/23-22:50 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2021/04/23-22:50 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 0 ms
+2021/04/23-22:50 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
+2021/04/23-22:50 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
+2021/04/23-22:50 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 17192 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
+2021/04/23-22:50 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
+2021/04/23-22:50 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2021/04/23-22:50 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2021/04/23-22:50 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021/04/23-22:50 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2021/04/23-22:50 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 829 ms
+2021/04/23-22:50 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2021/04/23-22:50 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021/04/23-22:50 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2021/04/23-22:50 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.927 seconds (JVM running for 2.839)
+2021/04/23-22:50 [main] INFO  com.ylesb.bsfs.BsfsApplication- 鏈嶅姟鍚姩瀹屾垚!
+2021/04/23-22:50 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/04/23-22:50 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2021/04/23-22:50 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 0 ms
+2021/04/23-22:50 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
+2021/04/23-22:50 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
+2021/04/23-22:53 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 8680 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
+2021/04/23-22:53 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
+2021/04/23-22:53 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2021/04/23-22:53 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2021/04/23-22:53 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021/04/23-22:53 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2021/04/23-22:53 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 825 ms
+2021/04/23-22:53 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2021/04/23-22:53 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021/04/23-22:53 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2021/04/23-22:53 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.947 seconds (JVM running for 2.912)
+2021/04/23-22:53 [main] INFO  com.ylesb.bsfs.BsfsApplication- 鏈嶅姟鍚姩瀹屾垚!
+2021/04/23-22:53 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/04/23-22:53 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2021/04/23-22:53 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 0 ms
+2021/04/23-22:53 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
+2021/04/23-22:53 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
