@@ -53,8 +53,8 @@ public class FileController {
         //String fileName = file.getOriginalFilename();//可能出现问题。
         String fileName=FileUtil.getFileName(file); ;
         //设置文件上传路径
-        String path = ClassUtils.getDefaultClassLoader().getResource("static").getPath();
-      //  String path = System.getProperty("user.dir")+"/faceImg/";
+      ///  String path = ClassUtils.getDefaultClassLoader().getResource("static").getPath();
+        String path = System.getProperty("user.dir")+"/faceImg/";
      //   String imgUrl = ResourceUtils.getURL("classpath:").getPath() + "static/imgGallery/" + newName;
         File toFile = null;
         try {

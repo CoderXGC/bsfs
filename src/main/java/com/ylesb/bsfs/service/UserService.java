@@ -18,4 +18,5 @@ public interface UserService {
     List<UserBean> findall();
     AddFaceimgRPTO addfaceimg(AddFaceimgRQTO login);
     List<FaceImgUrlBean> findfaceimg();
+    LoginRPTO updatepwd(LoginRQTO login);
 }

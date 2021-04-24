@@ -9,4 +9,7 @@
     <select id="findsign" resultType="com.ylesb.bsfs.bean.SignBean">
         SELECT * FROM signlog WHERE signid = #{signid}
     </select>
+    <update id="signout">
+        update signlog set signouttime = #{signouttime} where signid = #{signid}
+</update>
 </mapper>

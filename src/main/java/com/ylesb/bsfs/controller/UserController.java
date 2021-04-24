@@ -80,9 +80,27 @@ public class UserController {
         return new RPTO<>(ActionCode.SUCCESS,rpto);
     }
     @ResponseBody
+    @RequestMapping(value = "/updatepwd",method = RequestMethod.POST)
+    public RPTO updatepwd(@RequestBody @Valid LoginRQTO loginRQTO) {
+        LoginRPTO  rpto=mUserService.updatepwd(loginRQTO);
+        if(rpto == null){
+            return new RPTO<>("添加失败");
+        }
+        return new RPTO<>(ActionCode.SUCCESS,rpto);
+    }
+    @ResponseBody
     @RequestMapping(value = "/signin",method = RequestMethod.POST)
-    public RPTO sign(@RequestBody @Valid SignRQTO signRQTO) {
-        SignRPTO rpto1=mSignService.sign(signRQTO);
+    public RPTO signin(@RequestBody @Valid SignRQTO signRQTO) {
+        SignRPTO rpto1=mSignService.signin(signRQTO);
+        if(rpto1 == null){
+            return new RPTO<>("签到失败请联系管理员");
+        }
+        return new RPTO<>(ActionCode.SUCCESS,rpto1);
+    }
+    @ResponseBody
+    @RequestMapping(value = "/signout",method = RequestMethod.POST)
+    public RPTO signout(@RequestBody @Valid SignRQTO signRQTO) {
+        SignRPTO rpto1=mSignService.signout(signRQTO);
         if(rpto1 == null){
             return new RPTO<>("签到失败请联系管理员");
         }

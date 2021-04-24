@@ -40,5 +40,6 @@ public class SignRQTO {
     private int did;
 
     private String machine;
+
     private String signouttime;
 }

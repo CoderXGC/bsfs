@@ -27,4 +27,6 @@ import javax.validation.constraints.NotEmpty;
 public interface SignMapper {
     void signin(@Param("id") String id, @Param("signid") String signid,@Param("flag") String flag, @Param("signintime") String signintime, @Param("daytime") String daytime, @Param("did") int did, @Param("machine") String machine,@Param("signouttime") String signouttime);
     SignBean findsign(@Param("signid") String signid);
+    void signout(@Param("id") String id, @Param("signid") String signid, @Param("daytime") String daytime, @Param("machine") String machine,@Param("signouttime") String signouttime);
+
 }

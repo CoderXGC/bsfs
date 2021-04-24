@@ -33,9 +33,9 @@ public class SignServiceImpl implements SignService {
     private SignMapper signMapper;
 
     @Override
-    public SignRPTO sign(SignRQTO signRQTO) {
+    public SignRPTO signin(SignRQTO signRQTO) {
     //    SignBean sign=
-        signMapper.signin(signRQTO.getId(),signRQTO.getSignid(),signRQTO.getFlag(),signRQTO.getSignintime(),signRQTO.getDaytime(),signRQTO.getDid(),signRQTO.getMachine(),signRQTO.getSignintime());
+        signMapper.signin(signRQTO.getId(),signRQTO.getSignid(),signRQTO.getFlag(),signRQTO.getSignintime(),signRQTO.getDaytime(),signRQTO.getDid(),signRQTO.getMachine(),signRQTO.getSignouttime());
         String user="111";
         if(user == null){
             return null;
@@ -48,14 +48,28 @@ public class SignServiceImpl implements SignService {
     }
 
     @Override
+    public SignRPTO signout(SignRQTO signRQTO) {
+        signMapper.signout(signRQTO.getId(),signRQTO.getSignid(),signRQTO.getDaytime(),signRQTO.getMachine(),signRQTO.getSignouttime());
+        String user="111";
+        if(user == null){
+            return null;
+        }
+        SignRPTO rpto = new SignRPTO();
+        rpto.setUser_id(user);
+        rpto.setSignid(user);
+        return rpto;
+    }
+
+    @Override
     public SignRPTO findsign(SignRQTO signRQTO) {
         SignBean findsign= signMapper.findsign(signRQTO.getSignid());
         if(findsign == null){
             return null;
         }
         SignRPTO rpto = new SignRPTO();
-        rpto.setUser_id(findsign.getSignid());
-        rpto.setSignid(findsign.getId());
+        rpto.setSignintime(findsign.getSignintime());
+        rpto.setUser_id(findsign.getId());
+        rpto.setSignouttime(findsign.getSignouttime());
         return rpto;
     }
 }

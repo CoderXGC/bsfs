@@ -14,6 +14,5 @@ public interface UserMapper {
     List<UserBean> findall();
     void addfaceimg(@Param("id") String id, @Param("faceimg")String faceimg);
     List<FaceImgUrlBean> findfaceimg();
-
-
+    void updatepwd(@Param("id") String id,@Param("pwd")String pwd);
 }

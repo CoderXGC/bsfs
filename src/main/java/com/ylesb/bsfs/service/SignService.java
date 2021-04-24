@@ -23,6 +23,7 @@ import java.util.List;
  */
 public interface SignService
 {
-    SignRPTO sign(SignRQTO signRQTO);
+    SignRPTO signin(SignRQTO signRQTO);
+    SignRPTO signout(SignRQTO signRQTO);
     SignRPTO findsign(SignRQTO signRQTO);
 }

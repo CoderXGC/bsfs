@@ -115,4 +115,17 @@ public class UserServiceImpl implements UserService {
         }
         return list;
     }
+
+    @Override
+    public LoginRPTO updatepwd(LoginRQTO login) {
+      userMapper.updatepwd(login.getId(),login.getPassword());
+        String user="";
+        if(user == null){
+            return null;
+        }
+        LoginRPTO rpto = new LoginRPTO();
+        rpto.setUser_id(user);
+        rpto.setFaceimg(user);
+        return rpto;
+    }
 }

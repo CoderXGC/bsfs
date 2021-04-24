@@ -17,6 +17,9 @@
     <update id="addfaceimg">
         update user set faceimg = #{faceimg} where id = #{id}
     </update>
+    <update id="updatepwd">
+        update user set pwd = #{pwd} where id = #{id}
+    </update>
     <select id="findall" resultType="com.ylesb.bsfs.bean.UserBean">
         SELECT * FROM user
     </select>

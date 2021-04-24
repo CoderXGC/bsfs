@@ -21,6 +21,7 @@ import lombok.Data;
 public class SignRPTO {
     private String user_id;
     private String name;
-    private String signinttime;
+    private String signintime;
+    private String signouttime;
     private String signid;
 }
