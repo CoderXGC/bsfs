@@ -53,23 +53,25 @@ public class FileController {
         //String fileName = file.getOriginalFilename();//可能出现问题。
         String fileName=FileUtil.getFileName(file); ;
         //设置文件上传路径
-      ///  String path = ClassUtils.getDefaultClassLoader().getResource("static").getPath();
-        String path = System.getProperty("user.dir")+"/faceImg/";
+       String path = ClassUtils.getDefaultClassLoader().getResource("static").getPath()+"/faceImg/";
+      //  String path = System.getProperty("user.dir")+"/faceImg/";
      //   String imgUrl = ResourceUtils.getURL("classpath:").getPath() + "static/imgGallery/" + newName;
         File toFile = null;
+
         try {
             if (file.equals("") || file.getSize() <= 0) {
                 file = null;
             } else {
-                InputStream ins = null;
-                ins = file.getInputStream();
-                toFile = new File(path+"/faceImg/"+id+fileName);
+                FileUtil.uploadFile(file.getBytes(), path, id+fileName);
+ //               InputStream ins = null;
+//                ins = file.getInputStream();
+//                toFile = new File(path+"/faceImg/"+id+fileName);
                 fileRPTO.setUrl(url.getHomeurl()+"/faceImg/"+id+fileName);
-                inputStreamToFile(ins, toFile);
-                ins.close();
+//                inputStreamToFile(ins, toFile);
+//                ins.close();
             }
             return new RPTO<>(ActionCode.SUCCESS,fileRPTO);
-        } catch (IOException e) {
+        } catch (Exception e ) {
             e.printStackTrace();
             return new RPTO<>("上传错误请联系管理员");
         }

@@ -62,7 +62,7 @@ public class SignServiceImpl implements SignService {
 
     @Override
     public SignRPTO findsign(SignRQTO signRQTO) {
-        SignBean findsign= signMapper.findsign(signRQTO.getSignid());
+        SignBean findsign= signMapper.findsign(signRQTO.getId(),signRQTO.getSignid());
         if(findsign == null){
             return null;
         }

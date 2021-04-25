@@ -1,849 +1,199 @@
-2021/04/24-08:14 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 2052 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
-2021/04/24-08:14 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
-2021/04/24-08:14 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
-2021/04/24-08:14 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
-2021/04/24-08:14 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021/04/24-08:14 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
-2021/04/24-08:14 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 932 ms
-2021/04/24-08:14 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
-2021/04/24-08:14 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021/04/24-08:14 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
-2021/04/24-08:14 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 2.119 seconds (JVM running for 4.195)
-2021/04/24-08:14 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
-2021/04/24-08:14 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021/04/24-08:14 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
-2021/04/24-08:14 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 0 ms
-2021/04/24-08:14 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
-2021/04/24-08:14 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
-2021/04/24-08:18 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7b813628 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021/04/24-08:18 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@465f4ce1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021/04/24-08:18 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5d6101a1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021/04/24-08:18 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@55e4afe1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021/04/24-08:18 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2aed6236 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021/04/24-08:18 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1ca5db2a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021/04/24-08:18 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@340711c3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021/04/24-08:18 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@44ec2b05 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021/04/24-08:18 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5510d7c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021/04/24-08:18 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@371ffa77 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
-2021/04/24-08:19 [http-nio-8080-exec-3] ERROR com.ylesb.bsfs.core.GlobalExceptionHandler- 异常:
-org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
-### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30005ms.
-### The error may exist in file [F:\IDEAProject\bsfs\target\classes\mapper\UserMapper.xml]
-### The error may involve com.ylesb.bsfs.mapper.UserMapper.login
-### The error occurred while executing a query
-### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30005ms.
-	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:96)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
-	at com.sun.proxy.$Proxy60.selectOne(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at com.sun.proxy.$Proxy63.login(Unknown Source)
-	at com.ylesb.bsfs.serviceIml.UserServiceImpl.login(UserServiceImpl.java:45)
-	at com.ylesb.bsfs.controller.UserController.login(UserController.java:38)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: org.apache.ibatis.exceptions.PersistenceException: 
-### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30005ms.
-### The error may exist in file [F:\IDEAProject\bsfs\target\classes\mapper\UserMapper.xml]
-### The error may involve com.ylesb.bsfs.mapper.UserMapper.login
-### The error occurred while executing a query
-### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30005ms.
-	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:149)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	... 58 common frames omitted
-Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30005ms.
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82)
-	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
-	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
-	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
-	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	... 65 common frames omitted
-Caused by: java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30005ms.
-	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:695)
-	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:197)
-	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
-	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
-	... 75 common frames omitted
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:453)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
-	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
-	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:725)
-	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:711)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	... 1 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.GeneratedConstructorAccessor35.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:953)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:823)
-	... 14 common frames omitted
-Caused by: java.net.NoRouteToHostException: No route to host: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
-	... 17 common frames omitted
-2021/04/24-08:19 [http-nio-8080-exec-4] ERROR com.ylesb.bsfs.core.GlobalExceptionHandler- 异常:
-org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
-### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30001ms.
-### The error may exist in file [F:\IDEAProject\bsfs\target\classes\mapper\UserMapper.xml]
-### The error may involve com.ylesb.bsfs.mapper.UserMapper.login
-### The error occurred while executing a query
-### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30001ms.
-	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:96)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
-	at com.sun.proxy.$Proxy60.selectOne(Unknown Source)
-	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at com.sun.proxy.$Proxy63.login(Unknown Source)
-	at com.ylesb.bsfs.serviceIml.UserServiceImpl.login(UserServiceImpl.java:45)
-	at com.ylesb.bsfs.controller.UserController.login(UserController.java:38)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: org.apache.ibatis.exceptions.PersistenceException: 
-### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30001ms.
-### The error may exist in file [F:\IDEAProject\bsfs\target\classes\mapper\UserMapper.xml]
-### The error may involve com.ylesb.bsfs.mapper.UserMapper.login
-### The error occurred while executing a query
-### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30001ms.
-	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:149)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
-	... 58 common frames omitted
-Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30001ms.
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82)
-	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
-	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
-	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337)
-	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62)
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
-	... 65 common frames omitted
-Caused by: java.sql.SQLTransientConnectionException: test - Connection is not available, request timed out after 30001ms.
-	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:695)
-	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:197)
-	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162)
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
-	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
-	... 75 common frames omitted
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:833)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:453)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
-	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
-	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:725)
-	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:711)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	... 1 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.GeneratedConstructorAccessor35.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:953)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:823)
-	... 14 common frames omitted
-Caused by: java.net.NoRouteToHostException: No route to host: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
-	... 17 common frames omitted
-2021/04/24-09:16 [test housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool- test - Thread starvation or clock leap detected (housekeeper delta=51m9s193ms289µs700ns).
-2021/04/24-09:27 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 13952 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
-2021/04/24-09:27 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
-2021/04/24-09:27 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
-2021/04/24-09:27 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
-2021/04/24-09:27 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021/04/24-09:27 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
-2021/04/24-09:27 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 1090 ms
-2021/04/24-09:27 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
-2021/04/24-09:27 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021/04/24-09:27 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
-2021/04/24-09:27 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 2.246 seconds (JVM running for 3.248)
-2021/04/24-09:27 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
-2021/04/24-09:27 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021/04/24-09:27 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
-2021/04/24-09:27 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 0 ms
-2021/04/24-09:27 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
-2021/04/24-09:27 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
-2021/04/24-09:43 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 12408 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
-2021/04/24-09:43 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
-2021/04/24-09:43 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
-2021/04/24-09:43 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
-2021/04/24-09:43 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021/04/24-09:43 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
-2021/04/24-09:43 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 751 ms
-2021/04/24-09:43 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
-2021/04/24-09:43 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021/04/24-09:43 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
-2021/04/24-09:43 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.642 seconds (JVM running for 2.527)
-2021/04/24-09:43 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
-2021/04/24-09:43 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021/04/24-09:43 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
-2021/04/24-09:43 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
-2021/04/24-09:43 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
-2021/04/24-09:43 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
-2021/04/24-10:00 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 19136 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
-2021/04/24-10:00 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
-2021/04/24-10:00 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
-2021/04/24-10:00 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
-2021/04/24-10:00 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021/04/24-10:00 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
-2021/04/24-10:00 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 759 ms
-2021/04/24-10:00 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
-2021/04/24-10:00 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021/04/24-10:00 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
-2021/04/24-10:00 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.612 seconds (JVM running for 2.436)
-2021/04/24-10:00 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
-2021/04/24-10:00 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021/04/24-10:00 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
-2021/04/24-10:00 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
-2021/04/24-10:00 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
-2021/04/24-10:00 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
-2021/04/24-10:00 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 16528 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
-2021/04/24-10:00 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
-2021/04/24-10:00 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
-2021/04/24-10:00 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
-2021/04/24-10:00 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021/04/24-10:00 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
-2021/04/24-10:00 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 824 ms
-2021/04/24-10:00 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
-2021/04/24-10:00 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021/04/24-10:00 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
-2021/04/24-10:00 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.658 seconds (JVM running for 2.478)
-2021/04/24-10:00 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
-2021/04/24-10:00 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021/04/24-10:00 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
-2021/04/24-10:00 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
-2021/04/24-10:00 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
-2021/04/24-10:00 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
-2021/04/24-10:11 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 13768 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
-2021/04/24-10:11 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
-2021/04/24-10:11 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
-2021/04/24-10:11 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
-2021/04/24-10:11 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021/04/24-10:11 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
-2021/04/24-10:11 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 762 ms
-2021/04/24-10:11 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
-2021/04/24-10:11 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021/04/24-10:11 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
-2021/04/24-10:11 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.651 seconds (JVM running for 2.47)
-2021/04/24-10:11 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
-2021/04/24-10:11 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021/04/24-10:11 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
-2021/04/24-10:11 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
-2021/04/24-10:11 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
-2021/04/24-10:11 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
-2021/04/24-10:43 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 1752 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
-2021/04/24-10:43 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
-2021/04/24-10:43 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
-2021/04/24-10:43 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
-2021/04/24-10:43 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021/04/24-10:43 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
-2021/04/24-10:43 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 785 ms
-2021/04/24-10:43 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
-2021/04/24-10:43 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021/04/24-10:43 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
-2021/04/24-10:43 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.62 seconds (JVM running for 2.483)
-2021/04/24-10:43 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
-2021/04/24-10:44 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021/04/24-10:44 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
-2021/04/24-10:44 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 0 ms
-2021/04/24-10:44 [http-nio-8080-exec-1] ERROR com.ylesb.bsfs.core.GlobalExceptionHandler- 异常:
-org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
- at [Source: (PushbackInputStream); line: 4, column: 3]
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:389)
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:342)
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:186)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:158)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:131)
-	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
-	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
- at [Source: (PushbackInputStream); line: 4, column: 3]
-	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1851)
-	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:707)
-	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:632)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1019)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:378)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:164)
-	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4526)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3521)
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:378)
-	... 51 common frames omitted
-2021/04/24-10:44 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 16996 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
-2021/04/24-10:44 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
-2021/04/24-10:44 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
-2021/04/24-10:44 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
-2021/04/24-10:44 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021/04/24-10:44 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
-2021/04/24-10:44 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 807 ms
-2021/04/24-10:44 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
-2021/04/24-10:44 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021/04/24-10:44 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
-2021/04/24-10:44 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.692 seconds (JVM running for 2.574)
-2021/04/24-10:44 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
-2021/04/24-10:44 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021/04/24-10:44 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
-2021/04/24-10:44 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
-2021/04/24-10:44 [http-nio-8080-exec-1] ERROR com.ylesb.bsfs.core.GlobalExceptionHandler- 异常:
-org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
- at [Source: (PushbackInputStream); line: 4, column: 3]
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:389)
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:342)
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:186)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:158)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:131)
-	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
-	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
- at [Source: (PushbackInputStream); line: 4, column: 3]
-	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1851)
-	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:707)
-	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:632)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1019)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:378)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:164)
-	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4526)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3521)
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:378)
-	... 51 common frames omitted
-2021/04/24-10:45 [http-nio-8080-exec-3] ERROR com.ylesb.bsfs.core.GlobalExceptionHandler- 异常:
-org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
- at [Source: (PushbackInputStream); line: 4, column: 3]
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:389)
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:342)
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:186)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:158)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:131)
-	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
-	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
- at [Source: (PushbackInputStream); line: 4, column: 3]
-	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1851)
-	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:707)
-	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:632)
-	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1019)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:378)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:164)
-	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4526)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3521)
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:378)
-	... 51 common frames omitted
-2021/04/24-10:47 [http-nio-8080-exec-5] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
-2021/04/24-10:47 [http-nio-8080-exec-5] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
-2021/04/24-12:07 [test housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool- test - Thread starvation or clock leap detected (housekeeper delta=36m31s392ms159µs300ns).
-2021/04/24-13:00 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 21740 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
-2021/04/24-13:00 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
-2021/04/24-13:00 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
-2021/04/24-13:00 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
-2021/04/24-13:00 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021/04/24-13:00 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
-2021/04/24-13:00 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 828 ms
-2021/04/24-13:00 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
-2021/04/24-13:00 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021/04/24-13:00 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
-2021/04/24-13:00 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.766 seconds (JVM running for 2.598)
-2021/04/24-13:00 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
-2021/04/24-13:01 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021/04/24-13:01 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
-2021/04/24-13:01 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
-2021/04/24-13:01 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
-2021/04/24-13:01 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
-2021/04/24-13:27 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 20536 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
-2021/04/24-13:27 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
-2021/04/24-13:27 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
-2021/04/24-13:27 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
-2021/04/24-13:27 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021/04/24-13:27 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
-2021/04/24-13:27 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 777 ms
-2021/04/24-13:27 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
-2021/04/24-13:27 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021/04/24-13:27 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
-2021/04/24-13:27 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.709 seconds (JVM running for 2.528)
-2021/04/24-13:27 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
-2021/04/24-13:43 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021/04/24-13:43 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
-2021/04/24-13:43 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
-2021/04/24-13:43 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
-2021/04/24-13:43 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
-2021/04/24-13:43 [http-nio-8080-exec-1] ERROR com.ylesb.bsfs.core.GlobalExceptionHandler- 异常:
-org.apache.ibatis.binding.BindingException: Mapper method 'com.ylesb.bsfs.mapper.UserMapper.updatepwd' has an unsupported return type: class com.ylesb.bsfs.bean.UserBean
-	at org.apache.ibatis.binding.MapperMethod.rowCountResult(MapperMethod.java:118)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at com.sun.proxy.$Proxy63.updatepwd(Unknown Source)
-	at com.ylesb.bsfs.serviceIml.UserServiceImpl.updatepwd(UserServiceImpl.java:121)
-	at com.ylesb.bsfs.controller.UserController.updatepwd(UserController.java:85)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:745)
-2021/04/24-13:46 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 7772 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
-2021/04/24-13:46 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
-2021/04/24-13:46 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
-2021/04/24-13:46 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
-2021/04/24-13:46 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021/04/24-13:46 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
-2021/04/24-13:46 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 757 ms
-2021/04/24-13:46 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
-2021/04/24-13:46 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021/04/24-13:46 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
-2021/04/24-13:46 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.607 seconds (JVM running for 2.408)
-2021/04/24-13:46 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
-2021/04/24-13:46 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021/04/24-13:46 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
-2021/04/24-13:46 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 0 ms
-2021/04/24-13:46 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
-2021/04/24-13:46 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
-2021/04/24-13:46 [http-nio-8080-exec-1] ERROR com.ylesb.bsfs.core.GlobalExceptionHandler- 异常:
-org.apache.ibatis.binding.BindingException: Mapper method 'com.ylesb.bsfs.mapper.UserMapper.updatepwd' has an unsupported return type: class com.ylesb.bsfs.bean.UserBean
-	at org.apache.ibatis.binding.MapperMethod.rowCountResult(MapperMethod.java:118)
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67)
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
-	at com.sun.proxy.$Proxy63.updatepwd(Unknown Source)
-	at com.ylesb.bsfs.serviceIml.UserServiceImpl.updatepwd(UserServiceImpl.java:121)
-	at com.ylesb.bsfs.controller.UserController.updatepwd(UserController.java:85)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:745)
-2021/04/24-13:47 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 5116 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
-2021/04/24-13:47 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
-2021/04/24-13:47 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
-2021/04/24-13:47 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
-2021/04/24-13:47 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021/04/24-13:47 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
-2021/04/24-13:47 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 749 ms
-2021/04/24-13:47 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
-2021/04/24-13:47 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021/04/24-13:47 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
-2021/04/24-13:47 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.612 seconds (JVM running for 2.46)
-2021/04/24-13:47 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
-2021/04/24-13:47 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021/04/24-13:47 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
-2021/04/24-13:47 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 0 ms
-2021/04/24-13:47 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
-2021/04/24-13:47 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
-2021/04/24-15:12 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 13404 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
-2021/04/24-15:12 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
-2021/04/24-15:12 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
-2021/04/24-15:12 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
-2021/04/24-15:12 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021/04/24-15:12 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
-2021/04/24-15:12 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 767 ms
-2021/04/24-15:12 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
-2021/04/24-15:12 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2021/04/24-15:12 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
-2021/04/24-15:12 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.632 seconds (JVM running for 2.391)
-2021/04/24-15:12 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
+2021/04/25-10:30 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 15032 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
+2021/04/25-10:30 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
+2021/04/25-10:30 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2021/04/25-10:30 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2021/04/25-10:30 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021/04/25-10:30 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2021/04/25-10:30 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 1123 ms
+2021/04/25-10:30 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2021/04/25-10:30 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021/04/25-10:30 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2021/04/25-10:30 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 2.472 seconds (JVM running for 4.013)
+2021/04/25-10:30 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
+2021/04/25-10:31 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/04/25-10:31 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2021/04/25-10:31 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
+2021/04/25-10:31 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
+2021/04/25-10:31 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
+2021/04/25-10:32 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@67d81895 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-10:32 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5b67814a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-10:32 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7cdc3603 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-10:32 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1fd1710b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-10:32 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5ca6d105 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-10:32 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3b2c660a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-10:32 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@26dd3342 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-10:32 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@329047bb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-10:32 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@10b733 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-10:32 [http-nio-8080-exec-5] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7f85f887 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-11:00 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 15376 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
+2021/04/25-11:00 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
+2021/04/25-11:00 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2021/04/25-11:00 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2021/04/25-11:00 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021/04/25-11:00 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2021/04/25-11:00 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 1319 ms
+2021/04/25-11:00 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2021/04/25-11:00 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021/04/25-11:00 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2021/04/25-11:00 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 2.557 seconds (JVM running for 3.939)
+2021/04/25-11:00 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
+2021/04/25-11:00 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/04/25-11:00 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2021/04/25-11:00 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
+2021/04/25-11:01 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 19380 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
+2021/04/25-11:01 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
+2021/04/25-11:01 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2021/04/25-11:01 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2021/04/25-11:01 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021/04/25-11:01 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2021/04/25-11:01 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 1069 ms
+2021/04/25-11:01 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2021/04/25-11:01 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021/04/25-11:01 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2021/04/25-11:01 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 2.268 seconds (JVM running for 3.438)
+2021/04/25-11:01 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
+2021/04/25-11:01 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/04/25-11:01 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2021/04/25-11:01 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
+2021/04/25-11:02 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 17800 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
+2021/04/25-11:02 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
+2021/04/25-11:02 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2021/04/25-11:02 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2021/04/25-11:02 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021/04/25-11:02 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2021/04/25-11:02 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 1184 ms
+2021/04/25-11:02 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2021/04/25-11:02 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021/04/25-11:02 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2021/04/25-11:02 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 2.646 seconds (JVM running for 4.01)
+2021/04/25-11:02 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
+2021/04/25-11:02 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/04/25-11:02 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2021/04/25-11:02 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 2 ms
+2021/04/25-11:04 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 8300 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
+2021/04/25-11:04 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
+2021/04/25-11:04 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2021/04/25-11:04 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2021/04/25-11:04 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021/04/25-11:04 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2021/04/25-11:04 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 1267 ms
+2021/04/25-11:04 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2021/04/25-11:04 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021/04/25-11:04 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2021/04/25-11:04 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 2.496 seconds (JVM running for 3.751)
+2021/04/25-11:04 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
+2021/04/25-11:04 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/04/25-11:04 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2021/04/25-11:04 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
+2021/04/25-11:04 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 7356 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
+2021/04/25-11:04 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
+2021/04/25-11:04 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2021/04/25-11:04 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2021/04/25-11:04 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021/04/25-11:04 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2021/04/25-11:04 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 1187 ms
+2021/04/25-11:04 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2021/04/25-11:04 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021/04/25-11:04 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2021/04/25-11:04 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 2.485 seconds (JVM running for 3.818)
+2021/04/25-11:04 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
+2021/04/25-11:04 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/04/25-11:04 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2021/04/25-11:04 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
+2021/04/25-11:04 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
+2021/04/25-11:04 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
+2021/04/25-11:08 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@ff24990 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-11:08 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4e40f0c4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-11:08 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3a1bb2d6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-11:08 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@d2229bc (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-11:08 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3a928f8f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-11:08 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@33da923a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-11:08 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@9d95c4b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-11:08 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@15aafb05 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-11:08 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5c46fecd (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-11:08 [http-nio-8080-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase- test - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1fbeca0a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021/04/25-11:08 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 15540 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
+2021/04/25-11:08 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
+2021/04/25-11:08 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2021/04/25-11:08 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2021/04/25-11:08 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021/04/25-11:08 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2021/04/25-11:08 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 1018 ms
+2021/04/25-11:08 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2021/04/25-11:08 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021/04/25-11:08 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2021/04/25-11:08 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 2.111 seconds (JVM running for 3.589)
+2021/04/25-11:08 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
+2021/04/25-11:09 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/04/25-11:09 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2021/04/25-11:09 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
+2021/04/25-11:09 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
+2021/04/25-11:09 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
+2021/04/25-18:58 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 17928 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
+2021/04/25-18:58 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
+2021/04/25-18:58 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2021/04/25-18:58 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2021/04/25-18:58 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021/04/25-18:58 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2021/04/25-18:58 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 889 ms
+2021/04/25-18:58 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2021/04/25-18:58 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021/04/25-18:58 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2021/04/25-18:58 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.904 seconds (JVM running for 2.968)
+2021/04/25-18:58 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
+2021/04/25-18:58 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/04/25-18:58 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2021/04/25-18:58 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
+2021/04/25-18:58 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
+2021/04/25-18:58 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
+2021/04/25-19:02 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 18804 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
+2021/04/25-19:02 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
+2021/04/25-19:02 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2021/04/25-19:02 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2021/04/25-19:02 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021/04/25-19:02 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2021/04/25-19:02 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 684 ms
+2021/04/25-19:02 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2021/04/25-19:02 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021/04/25-19:02 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2021/04/25-19:02 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.519 seconds (JVM running for 2.175)
+2021/04/25-19:02 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
+2021/04/25-19:02 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/04/25-19:02 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2021/04/25-19:02 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
+2021/04/25-19:02 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
+2021/04/25-19:02 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
+2021/04/25-21:06 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 18492 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
+2021/04/25-21:06 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
+2021/04/25-21:06 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2021/04/25-21:06 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2021/04/25-21:06 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021/04/25-21:06 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2021/04/25-21:06 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 911 ms
+2021/04/25-21:06 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2021/04/25-21:06 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021/04/25-21:06 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2021/04/25-21:06 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.974 seconds (JVM running for 2.987)
+2021/04/25-21:06 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
+2021/04/25-21:06 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/04/25-21:06 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2021/04/25-21:06 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
+2021/04/25-21:06 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
+2021/04/25-21:07 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.
+2021/04/25-21:07 [main] INFO  com.ylesb.bsfs.BsfsApplication- Starting BsfsApplication using Java 1.8.0_121 on XGC with PID 10756 (F:\IDEAProject\bsfs\target\classes started by 46653 in F:\IDEAProject\bsfs)
+2021/04/25-21:07 [main] INFO  com.ylesb.bsfs.BsfsApplication- No active profile set, falling back to default profiles: default
+2021/04/25-21:07 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8080 (http)
+2021/04/25-21:07 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2021/04/25-21:07 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021/04/25-21:07 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2021/04/25-21:07 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext- Root WebApplicationContext: initialization completed in 824 ms
+2021/04/25-21:07 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2021/04/25-21:07 [main] WARN  org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration- Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021/04/25-21:07 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8080 (http) with context path ''
+2021/04/25-21:07 [main] INFO  com.ylesb.bsfs.BsfsApplication- Started BsfsApplication in 1.807 seconds (JVM running for 2.726)
+2021/04/25-21:07 [main] INFO  com.ylesb.bsfs.BsfsApplication- 服务启动完成!
+2021/04/25-21:07 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021/04/25-21:07 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2021/04/25-21:07 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 1 ms
+2021/04/25-21:07 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Starting...
+2021/04/25-21:07 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource- test - Start completed.

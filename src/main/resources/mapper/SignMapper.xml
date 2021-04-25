@@ -7,7 +7,7 @@
         INSERT INTO signlog(id,signid,flag,signintime,daytime,did,machine,signouttime)VALUES(#{id}, #{signid}, #{flag}, #{signintime} , #{daytime}, #{did},#{machine},#{signouttime})
     </insert>
     <select id="findsign" resultType="com.ylesb.bsfs.bean.SignBean">
-        SELECT * FROM signlog WHERE signid = #{signid}
+        SELECT * FROM signlog WHERE signid = #{signid} and id = #{id}
     </select>
     <update id="signout">
         update signlog set signouttime = #{signouttime} where signid = #{signid}
