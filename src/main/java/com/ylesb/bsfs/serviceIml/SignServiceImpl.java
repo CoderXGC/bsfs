@@ -10,8 +10,6 @@ package com.ylesb.bsfs.serviceIml;
 
 import com.ylesb.bsfs.bean.SignBean;
 import com.ylesb.bsfs.mapper.SignMapper;
-import com.ylesb.bsfs.mapper.UserMapper;
-import com.ylesb.bsfs.rpto.AddFaceimgRPTO;
 import com.ylesb.bsfs.rpto.SignRPTO;
 import com.ylesb.bsfs.rqto.SignRQTO;
 import com.ylesb.bsfs.service.SignService;
