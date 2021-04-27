@@ -8,7 +8,6 @@ import com.ylesb.bsfs.rpto.*;
 import com.ylesb.bsfs.rqto.*;
 import com.ylesb.bsfs.service.SignService;
 import com.ylesb.bsfs.service.UserService;
-import com.ylesb.bsfs.serviceIml.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,7 +20,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by cc_want on 2018/6/2.
+ *
+ * 〈日志〉
+ *
+ * @author White
+ * @create 2021/4/20
  */
 @Controller
 @RequestMapping("/user")
