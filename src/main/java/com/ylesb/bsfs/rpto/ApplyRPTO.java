@@ -1,24 +1,24 @@
 /**
  * Copyright (C), 2020-2021, www.ylesb.com
- * FileName: ApplyBean
+ * FileName: ApplyRPTO
  * Author:   White
- * Date:     2021/4/28 21:27
- * Description: 申请实体类
+ * Date:     2021/4/29 9:34
+ * Description: 申请接收封装
  * History:
  */
-package com.ylesb.bsfs.bean;
+package com.ylesb.bsfs.rpto;
 
 import lombok.Data;
 
 /**
  *
- * 〈申请实体类〉
+ * 〈申请接收封装〉
  *
  * @author White
- * @create 2021/4/28
+ * @create 2021/4/29
  */
 @Data
-public class ApplyBean {
+public class ApplyRPTO {
     private String applyid;
     private String message;
     private String applytime;
@@ -27,5 +27,4 @@ public class ApplyBean {
     private String status;
     private String id;
     private String type;
-    private String time;
 }

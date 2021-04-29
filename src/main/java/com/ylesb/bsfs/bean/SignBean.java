@@ -20,7 +20,7 @@ import lombok.Data;
 public class SignBean {
     private String id;
     private String signid;
-    private String flag;
+    private String latetime;
     private String signintime;
     private String daytime;
     private int did;

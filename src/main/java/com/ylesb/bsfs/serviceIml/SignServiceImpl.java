@@ -33,7 +33,7 @@ public class SignServiceImpl implements SignService {
     @Override
     public SignRPTO signin(SignRQTO signRQTO) {
     //    SignBean sign=
-        signMapper.signin(signRQTO.getId(),signRQTO.getSignid(),signRQTO.getFlag(),signRQTO.getSignintime(),signRQTO.getDaytime(),signRQTO.getDid(),signRQTO.getMachine(),signRQTO.getSignouttime());
+        signMapper.signin(signRQTO.getId(),signRQTO.getSignid(),signRQTO.getLatetime(),signRQTO.getSignintime(),signRQTO.getDaytime(),signRQTO.getDid(),signRQTO.getMachine(),signRQTO.getSignouttime());
         String user="111";
         if(user == null){
             return null;

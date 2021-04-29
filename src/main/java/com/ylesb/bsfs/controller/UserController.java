@@ -1,6 +1,7 @@
 package com.ylesb.bsfs.controller;
 
 
+import com.ylesb.bsfs.bean.ApplyBean;
 import com.ylesb.bsfs.bean.FaceImgUrlBean;
 import com.ylesb.bsfs.bean.UserBean;
 import com.ylesb.bsfs.core.ActionCode;
@@ -59,7 +60,7 @@ public class UserController {
         List<UserBean> rpto = mUserService.findall();
 
        // String rpto=mUserService.findall();
-        if(rpto == null){
+        if(rpto.size() ==0){
             return new RPTO<>("未找到");
         }
         return new RPTO<>(ActionCode.SUCCESS,rpto);
@@ -68,7 +69,7 @@ public class UserController {
     @RequestMapping(value = "/findfaceimg",method = RequestMethod.POST)
     public RPTO findfaceimg() {
         List<FaceImgUrlBean> rpto = mUserService.findfaceimg();
-        if(rpto == null){
+        if(rpto.size()==0){
             return new RPTO<>("未找到");
         }
         return new RPTO<>(ActionCode.SUCCESS,rpto);
@@ -118,4 +119,41 @@ public class UserController {
         }
         return new RPTO<>(ActionCode.SUCCESS,rpto1);
     }
+    @ResponseBody
+    @RequestMapping(value = "/addapply",method = RequestMethod.POST)
+    public RPTO addapply(@RequestBody @Valid ApplyRQTO applyRQTO) {
+        ApplyRPTO rpto = mUserService.addapply(applyRQTO);
+        if(rpto == null){
+            return new RPTO<>("添加失败");
+        }
+        return new RPTO<>(ActionCode.SUCCESS,rpto);
+    }
+    @ResponseBody
+    @RequestMapping(value = "/findapply",method = RequestMethod.POST)
+    public RPTO findapply(@RequestBody @Valid ApplyRQTO applyRQTO) {
+        ApplyRPTO rpto = mUserService.findapply(applyRQTO);
+        if(rpto == null){
+            return new RPTO<>("查找失败");
+        }
+        return new RPTO<>(ActionCode.SUCCESS,rpto);
+    }
+    @ResponseBody
+    @RequestMapping(value = "/findallapply",method = RequestMethod.POST)
+    public RPTO findallapply() {
+        List<ApplyBean> rpto = mUserService.findallapply();
+        if(rpto.size()== 0){
+            return new RPTO<>("未找到");
+        }
+        return new RPTO<>(ActionCode.SUCCESS,rpto);
+    }
+    @ResponseBody
+    @RequestMapping(value = "/finduserallapply",method = RequestMethod.POST)
+    public RPTO finduserallapply(@RequestBody @Valid ApplyRQTO applyRQTO) {
+        List<ApplyBean> rpto = mUserService.finduserallapply(applyRQTO);
+        if(rpto.size() == 0){
+            return new RPTO<>("未找到您的申请信息！");
+        }
+        return new RPTO<>(ActionCode.SUCCESS,rpto);
+    }
+
 }

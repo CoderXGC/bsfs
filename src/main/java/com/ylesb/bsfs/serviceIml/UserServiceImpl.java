@@ -10,13 +10,16 @@
  */
 package com.ylesb.bsfs.serviceIml;
 
+import com.ylesb.bsfs.bean.ApplyBean;
 import com.ylesb.bsfs.bean.FaceImgUrlBean;
 import com.ylesb.bsfs.bean.UserBean;
 import com.ylesb.bsfs.mapper.UserMapper;
 import com.ylesb.bsfs.rpto.AddFaceimgRPTO;
+import com.ylesb.bsfs.rpto.ApplyRPTO;
 import com.ylesb.bsfs.rpto.FindRPTO;
 import com.ylesb.bsfs.rpto.LoginRPTO;
 import com.ylesb.bsfs.rqto.AddFaceimgRQTO;
+import com.ylesb.bsfs.rqto.ApplyRQTO;
 import com.ylesb.bsfs.rqto.FindRQTO;
 import com.ylesb.bsfs.rqto.LoginRQTO;
 import com.ylesb.bsfs.service.UserService;
@@ -128,4 +131,81 @@ public class UserServiceImpl implements UserService {
         rpto.setFaceimg(user);
         return rpto;
     }
+
+    @Override
+    public ApplyRPTO addapply(ApplyRQTO applyRQTO) {
+        // UserBean user =
+        userMapper.addapply(applyRQTO.getApplyid(),applyRQTO.getMessage(),applyRQTO.getStarttime(),applyRQTO.getEndtime(),applyRQTO.getId(),applyRQTO.getType());
+        String user="";
+        if(user == null){
+            return null;
+        }
+        ApplyRPTO rpto = new ApplyRPTO();
+
+        return rpto;
+    }
+
+    @Override
+    public ApplyRPTO findapply(ApplyRQTO applyRQTO) {
+        ApplyBean applyBean =userMapper.findapply(applyRQTO.getId());
+        String user="";
+        if(user == null){
+            return null;
+        }
+        ApplyRPTO rpto = new ApplyRPTO();
+        rpto.setApplyid(applyBean.getApplyid());
+        rpto.setMessage(applyBean.getMessage());
+        rpto.setStarttime(applyBean.getStarttime());
+        rpto.setEndtime(applyBean.getEndtime());
+        rpto.setId(applyBean.getId());
+        rpto.setType(applyBean.getType());
+        rpto.setStatus(applyBean.getStatus());
+        return rpto;
+    }
+
+    @Override
+    public List<ApplyBean> findallapply() {
+        List<ApplyBean> apply = userMapper.findallapply();
+        if(apply == null){
+            return null;
+        }
+        List<ApplyBean> list = new ArrayList<>();
+
+        for (int i=0;i<apply.size();i++) {
+            ApplyBean applyBean=new ApplyBean();
+            applyBean.setApplyid(apply.get(i).getApplyid());
+            applyBean.setMessage(apply.get(i).getMessage());
+            applyBean.setStarttime(apply.get(i).getStarttime());
+            applyBean.setEndtime(apply.get(i).getEndtime());
+            applyBean.setType(apply.get(i).getType());
+            applyBean.setStatus(apply.get(i).getStatus());
+            applyBean.setId(apply.get(i).getId());
+            list.add(applyBean);
+        }
+        return list;
+    }
+
+    @Override
+    public List<ApplyBean> finduserallapply(ApplyRQTO applyRQTO) {
+        List<ApplyBean> apply = userMapper.finduserallapply(applyRQTO.getId());
+        if(apply == null){
+            return null;
+        }
+        List<ApplyBean> list = new ArrayList<>();
+
+        for (int i=0;i<apply.size();i++) {
+            ApplyBean applyBean=new ApplyBean();
+            applyBean.setApplyid(apply.get(i).getApplyid());
+            applyBean.setMessage(apply.get(i).getMessage());
+            applyBean.setStarttime(apply.get(i).getStarttime());
+            applyBean.setEndtime(apply.get(i).getEndtime());
+            applyBean.setType(apply.get(i).getType());
+            applyBean.setStatus(apply.get(i).getStatus());
+            applyBean.setId(apply.get(i).getId());
+            list.add(applyBean);
+        }
+        return list;
+    }
+
+
 }

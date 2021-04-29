@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ylesb.bsfs.mapper.SignMapper">
     <insert id="signin">
-        INSERT INTO signlog(id,signid,flag,signintime,daytime,did,machine,signouttime)VALUES(#{id}, #{signid}, #{flag}, #{signintime} , #{daytime}, #{did},#{machine},#{signouttime})
+        INSERT INTO signlog(id,signid,latetime,signintime,daytime,did,machine,signouttime)VALUES(#{id}, #{signid}, #{latetime}, #{signintime} , #{daytime}, #{did},#{machine},#{signouttime})
     </insert>
     <select id="findsign" resultType="com.ylesb.bsfs.bean.SignBean">
         SELECT * FROM signlog WHERE signid = #{signid} and id = #{id}

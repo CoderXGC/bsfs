@@ -31,7 +31,7 @@ public class SignRQTO {
 
     private String signid;
 
-    private String flag;
+    private String latetime;
 
     private String signintime;
 
