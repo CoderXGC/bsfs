@@ -16,8 +16,9 @@ public interface UserMapper {
     void addfaceimg(@Param("id") String id, @Param("faceimg")String faceimg);
     List<FaceImgUrlBean> findfaceimg();
     void updatepwd(@Param("id") String id,@Param("pwd")String pwd);
-    void addapply(@Param("applyid") String applyid,@Param("message") String message,@Param("starttime") String starttime,@Param("endtime") String endtime,@Param("id") String id,@Param("type") String type);
+    void addapply(@Param("applyid") String applyid,@Param("message") String message,@Param("starttime") String starttime,@Param("endtime") String endtime,@Param("id") String id,@Param("type") String type,@Param("applytime") String applytime,@Param("time") String time);
     ApplyBean findapply(@Param("id") String id);
     List<ApplyBean> findallapply();
     List<ApplyBean> finduserallapply(@Param("id") String id);
+    void delapply(@Param("applyid") String applyid);
 }

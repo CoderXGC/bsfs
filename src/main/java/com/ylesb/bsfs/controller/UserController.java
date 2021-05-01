@@ -11,10 +11,7 @@ import com.ylesb.bsfs.service.SignService;
 import com.ylesb.bsfs.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
@@ -28,6 +25,7 @@ import java.util.List;
  * @create 2021/4/20
  */
 @Controller
+@RestController
 @RequestMapping("/user")
 public class UserController {
 
@@ -152,6 +150,16 @@ public class UserController {
         List<ApplyBean> rpto = mUserService.finduserallapply(applyRQTO);
         if(rpto.size() == 0){
             return new RPTO<>("未找到您的申请信息！");
+        }
+        return new RPTO<>(ActionCode.SUCCESS,rpto);
+    }
+    @ResponseBody
+
+    @RequestMapping(value = "/delapply",method = RequestMethod.POST)
+    public RPTO delapply(@RequestBody @Valid ApplyRQTO applyRQTO) {
+        ApplyRPTO  rpto = mUserService.delapply(applyRQTO);
+        if(rpto == null){
+            return new RPTO<>("删除成功！");
         }
         return new RPTO<>(ActionCode.SUCCESS,rpto);
     }

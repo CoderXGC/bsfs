@@ -22,7 +22,7 @@
         SELECT * FROM user
     </select>
     <insert id="addapply">
-        INSERT INTO audit(applyid,message,starttime,endtime,id,type)VALUES(#{applyid}, #{message}, #{starttime}, #{endtime},#{id},#{type})
+        INSERT INTO audit(applyid,message,starttime,endtime,id,type,applytime,time)VALUES(#{applyid}, #{message}, #{starttime}, #{endtime},#{id},#{type},#{applytime},#{time})
     </insert>
     <select id="findapply" resultType="com.ylesb.bsfs.bean.ApplyBean">
       SELECT * FROM audit WHERE  id = #{id}
@@ -33,4 +33,7 @@
     <select id="finduserallapply" resultType="com.ylesb.bsfs.bean.ApplyBean">
         SELECT * FROM audit WHERE  id = #{id}
     </select>
+    <delete id="delapply">
+        delete from audit where applyid = #{applyid}
+    </delete>
 </mapper>

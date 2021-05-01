@@ -135,7 +135,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public ApplyRPTO addapply(ApplyRQTO applyRQTO) {
         // UserBean user =
-        userMapper.addapply(applyRQTO.getApplyid(),applyRQTO.getMessage(),applyRQTO.getStarttime(),applyRQTO.getEndtime(),applyRQTO.getId(),applyRQTO.getType());
+        userMapper.addapply(applyRQTO.getApplyid(),applyRQTO.getMessage(),applyRQTO.getStarttime(),applyRQTO.getEndtime(),applyRQTO.getId(),applyRQTO.getType(),applyRQTO.getApplytime(),applyRQTO.getTime());
         String user="";
         if(user == null){
             return null;
@@ -202,9 +202,22 @@ public class UserServiceImpl implements UserService {
             applyBean.setType(apply.get(i).getType());
             applyBean.setStatus(apply.get(i).getStatus());
             applyBean.setId(apply.get(i).getId());
+            applyBean.setApplytime(apply.get(i).getApplytime());
             list.add(applyBean);
         }
         return list;
+    }
+
+    @Override
+    public ApplyRPTO delapply(ApplyRQTO applyRQTO) {
+        userMapper.delapply(applyRQTO.getApplyid());
+        String user="";
+        if(user == null){
+            return null;
+        }
+        ApplyRPTO rpto = new ApplyRPTO();
+
+        return rpto;
     }
 
 

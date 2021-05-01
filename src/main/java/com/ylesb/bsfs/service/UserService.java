@@ -26,4 +26,5 @@ public interface UserService {
     ApplyRPTO findapply(ApplyRQTO applyRQTO);
     List<ApplyBean> findallapply();
     List<ApplyBean> finduserallapply(ApplyRQTO applyRQTO);
+    ApplyRPTO delapply(ApplyRQTO applyRQTO);
 }
