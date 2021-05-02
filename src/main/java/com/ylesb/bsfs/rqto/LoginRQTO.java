@@ -25,12 +25,9 @@ import javax.validation.constraints.NotEmpty;
 @Data
 public class LoginRQTO {
 
-    @NotEmpty(message = "id,不能为空")
-    @Length(max = 12,message = "昵称最大长度12")
+
     private String id;
 
-    @NotEmpty(message = "密码不能为空")
-    @Length(max = 32,message = "密码最大长度32")
     private String password;
 
 

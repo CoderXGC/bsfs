@@ -3,6 +3,7 @@ package com.ylesb.bsfs.controller;
 
 import com.ylesb.bsfs.bean.ApplyBean;
 import com.ylesb.bsfs.bean.FaceImgUrlBean;
+import com.ylesb.bsfs.bean.SignBean;
 import com.ylesb.bsfs.bean.UserBean;
 import com.ylesb.bsfs.core.ActionCode;
 import com.ylesb.bsfs.rpto.*;
@@ -135,15 +136,7 @@ public class UserController {
         }
         return new RPTO<>(ActionCode.SUCCESS,rpto);
     }
-    @ResponseBody
-    @RequestMapping(value = "/findallapply",method = RequestMethod.POST)
-    public RPTO findallapply() {
-        List<ApplyBean> rpto = mUserService.findallapply();
-        if(rpto.size()== 0){
-            return new RPTO<>("未找到");
-        }
-        return new RPTO<>(ActionCode.SUCCESS,rpto);
-    }
+
     @ResponseBody
     @RequestMapping(value = "/finduserallapply",method = RequestMethod.POST)
     public RPTO finduserallapply(@RequestBody @Valid ApplyRQTO applyRQTO) {
@@ -154,14 +147,33 @@ public class UserController {
         return new RPTO<>(ActionCode.SUCCESS,rpto);
     }
     @ResponseBody
-
     @RequestMapping(value = "/delapply",method = RequestMethod.POST)
     public RPTO delapply(@RequestBody @Valid ApplyRQTO applyRQTO) {
         ApplyRPTO  rpto = mUserService.delapply(applyRQTO);
         if(rpto == null){
-            return new RPTO<>("删除成功！");
+            return new RPTO<>("失败！");
         }
         return new RPTO<>(ActionCode.SUCCESS,rpto);
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/findsignall",method = RequestMethod.POST)
+    public RPTO findall(@RequestBody @Valid FindRQTO findRQTO) {
+        List<SignBean> rpto = mUserService.findsignall(findRQTO);
+
+        // String rpto=mUserService.findall();
+        if(rpto.size() ==0){
+            return new RPTO<>("未找到");
+        }
+        return new RPTO<>(ActionCode.SUCCESS,rpto);
+    }
+    @ResponseBody
+    @RequestMapping(value = "/updateuser",method = RequestMethod.POST)
+    public RPTO addfaceimg(@RequestBody @Valid UserBean userBean) {
+        FindRPTO rpto = mUserService.updateuser(userBean);
+        if(rpto == null){
+            return new RPTO<>("添加失败");
+        }
+        return new RPTO<>(ActionCode.SUCCESS,rpto);
+    }
 }

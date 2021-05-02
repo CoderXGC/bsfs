@@ -1,26 +1,24 @@
 /**
- * Copyright (C), 2020-2021, XXX有限公司
- * FileName: FindRPTO
+ * Copyright (C), 2020-2021, www.ylesb.com
+ * FileName: AddUser
  * Author:   White
- * Date:     2021/4/20 18:04
- * Description: 查找返回faceimg
+ * Date:     2021/5/2 9:23
+ * Description: 添加用户数据封装
  * History:
  */
-package com.ylesb.bsfs.rpto;
+package com.ylesb.bsfs.rqto;
 
 import lombok.Data;
 
-import java.util.List;
-
 /**
  *
- * 〈查找返回faceimg〉
+ * 〈添加用户数据封装〉
  *
  * @author White
- * @create 2021/4/20
+ * @create 2021/5/2
  */
 @Data
-public class FindRPTO {
+public class AddUserRQTO {
     private String id;
     private String name;
     private String faceimg;
@@ -30,5 +28,4 @@ public class FindRPTO {
     private String signouttime;
     private String telnum;
     private String email;
-    private String role;
 }

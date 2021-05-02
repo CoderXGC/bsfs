@@ -12,16 +12,14 @@ package com.ylesb.bsfs.serviceIml;
 
 import com.ylesb.bsfs.bean.ApplyBean;
 import com.ylesb.bsfs.bean.FaceImgUrlBean;
+import com.ylesb.bsfs.bean.SignBean;
 import com.ylesb.bsfs.bean.UserBean;
 import com.ylesb.bsfs.mapper.UserMapper;
 import com.ylesb.bsfs.rpto.AddFaceimgRPTO;
 import com.ylesb.bsfs.rpto.ApplyRPTO;
 import com.ylesb.bsfs.rpto.FindRPTO;
 import com.ylesb.bsfs.rpto.LoginRPTO;
-import com.ylesb.bsfs.rqto.AddFaceimgRQTO;
-import com.ylesb.bsfs.rqto.ApplyRQTO;
-import com.ylesb.bsfs.rqto.FindRQTO;
-import com.ylesb.bsfs.rqto.LoginRQTO;
+import com.ylesb.bsfs.rqto.*;
 import com.ylesb.bsfs.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,6 +60,12 @@ public class UserServiceImpl implements UserService {
             return null;
         }
         FindRPTO rpto = new FindRPTO();
+        rpto.setDid(user.getDid());
+        rpto.setEmail(user.getEmail());
+        rpto.setTelnum(user.getTelnum());
+        rpto.setId(user.getId());
+        rpto.setRole(user.getRole());
+        rpto.setName(user.getName());
         rpto.setFaceimg(user.getFaceimg());
         rpto.setSignintime(user.getSignintime());
         rpto.setSignouttime(user.getSignouttime());
@@ -79,6 +83,10 @@ public class UserServiceImpl implements UserService {
         for (int i=0;i<user.size();i++) {
             UserBean userBean = new UserBean();
             userBean.setId(user.get(i).getId());
+            userBean.setName(user.get(i).getName());
+            userBean.setDid(user.get(i).getDid());
+            userBean.setTelnum(user.get(i).getTelnum());
+            userBean.setEmail(user.get(i).getEmail());
             userBean.setSignintime(user.get(i).getSignintime());
             userBean.setSignouttime(user.get(i).getSignouttime());
             userBean.setFaceimg(user.get(i).getFaceimg());
@@ -163,27 +171,7 @@ public class UserServiceImpl implements UserService {
         return rpto;
     }
 
-    @Override
-    public List<ApplyBean> findallapply() {
-        List<ApplyBean> apply = userMapper.findallapply();
-        if(apply == null){
-            return null;
-        }
-        List<ApplyBean> list = new ArrayList<>();
 
-        for (int i=0;i<apply.size();i++) {
-            ApplyBean applyBean=new ApplyBean();
-            applyBean.setApplyid(apply.get(i).getApplyid());
-            applyBean.setMessage(apply.get(i).getMessage());
-            applyBean.setStarttime(apply.get(i).getStarttime());
-            applyBean.setEndtime(apply.get(i).getEndtime());
-            applyBean.setType(apply.get(i).getType());
-            applyBean.setStatus(apply.get(i).getStatus());
-            applyBean.setId(apply.get(i).getId());
-            list.add(applyBean);
-        }
-        return list;
-    }
 
     @Override
     public List<ApplyBean> finduserallapply(ApplyRQTO applyRQTO) {
@@ -217,6 +205,43 @@ public class UserServiceImpl implements UserService {
         }
         ApplyRPTO rpto = new ApplyRPTO();
 
+        return rpto;
+    }
+
+    @Override
+    public List<SignBean> findsignall(FindRQTO findRQTO) {
+        List<SignBean> sign = userMapper.findsignall(findRQTO.getId());
+        if(sign == null){
+            return null;
+        }
+        List<SignBean> list = new ArrayList<>();
+
+        for (int i=0;i<sign.size();i++) {
+            SignBean signBean = new SignBean();
+            signBean.setId(sign.get(i).getId());
+            signBean.setDaytime(sign.get(i).getDaytime());
+            signBean.setDid(sign.get(i).getDid());
+            signBean.setSignintime(sign.get(i).getSignintime());
+            signBean.setSignouttime(sign.get(i).getSignouttime());
+            signBean.setSignid(sign.get(i).getSignid());
+            signBean.setSignid(sign.get(i).getSignid());
+            signBean.setLatetime(sign.get(i).getLatetime());
+            signBean.setMachine(sign.get(i).getMachine());
+            list.add(signBean);
+        }
+        return list;
+    }
+
+    @Override
+    public FindRPTO updateuser(UserBean userBean) {
+        userMapper.updateuser(userBean.getId(),userBean.getTelnum(),userBean.getEmail());
+        String user="";
+        if(user == null){
+            return null;
+        }
+        FindRPTO rpto = new FindRPTO();
+        rpto.setId(user);
+        rpto.setFaceimg(user);
         return rpto;
     }
 

@@ -27,13 +27,16 @@
     <select id="findapply" resultType="com.ylesb.bsfs.bean.ApplyBean">
       SELECT * FROM audit WHERE  id = #{id}
     </select>
-    <select id="findallapply" resultType="com.ylesb.bsfs.bean.ApplyBean">
-        SELECT * FROM audit
-    </select>
-    <select id="finduserallapply" resultType="com.ylesb.bsfs.bean.ApplyBean">
-        SELECT * FROM audit WHERE  id = #{id}
-    </select>
     <delete id="delapply">
         delete from audit where applyid = #{applyid}
     </delete>
+    <select id="finduserallapply" resultType="com.ylesb.bsfs.bean.ApplyBean">
+        SELECT * FROM audit WHERE  id = #{id}
+    </select>
+    <select id="findsignall" resultType="com.ylesb.bsfs.bean.SignBean">
+        SELECT * FROM signlog WHERE id = #{id}
+    </select>
+    <update id="updateuser">
+        update user set telnum = #{telnum},email = #{email} where id = #{id}
+    </update>
 </mapper>

@@ -31,5 +31,8 @@ public class UserBean  {
     private int did;
     private String signintime;
     private String signouttime;
+    private String telnum;
+    private String email;
+    private String role;
 
 }

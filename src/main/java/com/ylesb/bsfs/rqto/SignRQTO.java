@@ -23,11 +23,7 @@ import javax.validation.constraints.NotEmpty;
  */
 @Data
 public class SignRQTO {
-    @NotEmpty(message = "id")
-    @Length(max = 12,message = "昵称最大长度12")
     private String id;
-    @NotEmpty(message = "signid")
-    @Length(max = 100,message = "签到最大数据100")
 
     private String signid;
 

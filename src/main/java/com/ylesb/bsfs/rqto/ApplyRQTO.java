@@ -27,8 +27,7 @@ public class ApplyRQTO {
     private String starttime;
     private String endtime;
     private String applytime;
-    @NotEmpty(message = "id")
-    @Length(max = 12,message = "昵称最大长度12")
+    private String status;
     private String id;
     private String type;
     private String time;

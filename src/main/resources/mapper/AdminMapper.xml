@@ -6,4 +6,25 @@
     <select id="login" resultType="com.ylesb.bsfs.bean.AdminBean">
         SELECT * FROM admin WHERE id = #{id} and pwd = #{pwd}
     </select>
+    <insert id="adduser">
+        INSERT INTO user(id,name,did)VALUES(#{id}, #{name},#{did})
+    </insert>
+    <select id="findallapply" resultType="com.ylesb.bsfs.bean.ApplyBean">
+        SELECT * FROM audit
+    </select>
+    <update id="upaudit">
+        update audit set status = #{status} where applyid = #{applyid}
+    </update>
+    <select id="findsignall" resultType="com.ylesb.bsfs.bean.SignBean">
+        SELECT * FROM signlog
+    </select>
+    <select id="findsignalltime" resultType="com.ylesb.bsfs.bean.SignBean">
+        SELECT * FROM signlog WHERE daytime = #{daytime}
+    </select>
+    <update id="updatesigntime">
+        update user set signintime = #{signintime},signouttime = #{signouttime}
+    </update>
+    <delete id="deluser">
+        delete from user where id = #{id}
+    </delete>
 </mapper>
