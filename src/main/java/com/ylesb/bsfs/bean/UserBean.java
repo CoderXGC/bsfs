@@ -10,6 +10,8 @@
  */
 package com.ylesb.bsfs.bean;
 
+import io.swagger.annotations.ApiModel;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.List;
@@ -22,6 +24,7 @@ import java.util.List;
  * @create 2021/4/16
  */
 @Data
+@ApiModel(" 用户模型")
 public class UserBean  {
 
     private String id;

@@ -8,12 +8,8 @@
  */
 package com.ylesb.bsfs.serviceIml;
 
-import com.ylesb.bsfs.bean.LogBean;
-import com.ylesb.bsfs.bean.UserBean;
-import com.ylesb.bsfs.mapper.LogMapper;
-import com.ylesb.bsfs.mapper.UserMapper;
+import com.ylesb.bsfs.mapper.SystemMapper;
 import com.ylesb.bsfs.rpto.LogRPTO;
-import com.ylesb.bsfs.rpto.LoginRPTO;
 import com.ylesb.bsfs.rqto.LogRQTO;
 import com.ylesb.bsfs.service.LogService;
 import lombok.extern.slf4j.Slf4j;
@@ -31,11 +27,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class LogServiceImpl implements LogService {
     @Autowired
-    private LogMapper logMapper;
+    private SystemMapper systemMapper;
     @Override
     public LogRPTO add(LogRQTO add) {
 //        LogBean log = logMapper.add(add.getId(),add.getMessage());
-        logMapper.add(add.getId(),add.getMessage());
+        systemMapper.addlog(add.getId(),add.getMessage());
         String log="";
         if(log == null){
             return null;

@@ -10,6 +10,7 @@ import com.ylesb.bsfs.rpto.*;
 import com.ylesb.bsfs.rqto.*;
 import com.ylesb.bsfs.service.SignService;
 import com.ylesb.bsfs.service.UserService;
+import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +26,8 @@ import java.util.List;
  * @author White
  * @create 2021/4/20
  */
+
+@Api("user相关api")
 @Controller
 @RestController
 @RequestMapping("/user")
@@ -34,7 +37,9 @@ public class UserController {
     private UserService mUserService;
     @Autowired
     private SignService mSignService;
-
+    @ApiOperation("登录接口")
+    @ApiImplicitParams({ @ApiImplicitParam(paramType = "query",name="id",dataType = "int",required = true,value="用户的id",defaultValue = "1") })
+    @ApiResponses({ @ApiResponse(code=-1,message="请求错误"),@ApiResponse(code=200,message="请求成功"),@ApiResponse(code=404,message="参数错误"),@ApiResponse(code=100,message="参数检验异常")})
     @ResponseBody
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public RPTO login(@RequestBody @Valid LoginRQTO login) {

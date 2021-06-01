@@ -33,12 +33,12 @@ import javax.validation.Valid;
  * @create 2021/4/20
  */
 @Controller
-@RequestMapping("/log")
-public class LogController {
+@RequestMapping("/sys")
+public class SystemController {
     @Autowired
     private LogService logService;
     @ResponseBody
-    @RequestMapping(value = "/loginin",method = RequestMethod.POST)
+    @RequestMapping(value = "/loglogin",method = RequestMethod.POST)
     public RPTO login(@RequestBody @Valid LogRQTO log) {
         LogRPTO rpto1=logService.add(log);
         if(rpto1 == null){

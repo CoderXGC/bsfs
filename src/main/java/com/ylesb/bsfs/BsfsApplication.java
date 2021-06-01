@@ -6,11 +6,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * Created by cc_want on 2018/6/2.
  */
 @Slf4j
+@EnableSwagger2
 @SpringBootApplication
 public class BsfsApplication extends SpringBootServletInitializer implements CommandLineRunner{
     @Override
