@@ -15,5 +15,6 @@
 
 #### 联系作者
 1.  欢迎bug反馈，建议，技术交流等~
+2.  -  **Contact-Email me :** [xgc（xgc@tom.com）](mailto:xgc@tom.com)
 ![Image text](https://i.loli.net/2021/11/29/pyIHGcArQ6DVid3.png)
 
